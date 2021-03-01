@@ -1,0 +1,30 @@
+{% extends "./base.html" %}
+
+{% load static %}
+
+{% block title %}Hoofball - Squad{% endblock %}
+
+{% block content %}
+    <h2>Squad</h2>
+
+    <section>
+        <p>
+            This is the squad of the club today. We have 24 players, 2 for each position, except for advanced midfielder and strikers where we have 3 per position.
+            The highlight of the season has been Henry Jones, hired for almost three months and who has already contributed 3 goals and 3 assists.
+            Tom Powell is our top goalscorer with 11 goals. He has 4 assists, tied with Irishman Josh Giurgi.
+        </p>
+        <img src="{% static '/hoofball/images/squad.png' %}" width="1366" height="768">
+
+        <p>This is the full squad.</p>
+        <img src="{% static '/hoofball/images/full_squad.png' %}" width="1366" height="768">
+    </section>
+{% endblock %}
+
+{% block show_comments %}
+    {% include "./show_comments.html" with comments=all_comments %}   
+{% endblock %}
+
+
+{% block comment_form %}
+    {% include "./forms/comment_form.html" with source="squad" %}   
+{% endblock %}

@@ -1,0 +1,32 @@
+<form action="" method="post">
+    {% csrf_token %}
+    <label>Name:</label>
+    <input type="text" id="name" name="name"><br>
+    <br>
+
+    <label>ID in game:</label>
+    <input type="text" id="gameID" name="gameID"><br>
+    <br>
+
+    <label>Age:</label>
+    <input type="text" id="age" name="age"><br>
+    <br>
+
+    <label>Position:</label>
+    <input type="text" id="position" name="position"><br>
+    <br>
+
+    <label>Wage:</label>
+    <input type="text" id="wage" name="wage"><br>
+    <br>
+
+    <label>Value:</label>
+    <input type="text" id="value" name="value"><br>
+    <br>
+
+    <label>What made you suggest this player? (280 characters limit)</label><br>
+    <textarea maxlength=280 required id="description" name="description"></textarea><br>
+
+    <br>
+    <input type="submit" value="submit">
+</form>

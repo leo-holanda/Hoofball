@@ -1,0 +1,27 @@
+{% extends "./base.html" %}
+
+{% load static %}
+
+{% block title %}Hoofball - Fixtures{% endblock %}
+
+{% block content %}
+    <section>
+        <p>These are our fixtures. We need to score 3 points in the next 2 matches, otherwise I will be fired.</p>
+        <p>
+            The hiring of Henry Jones was essential for the team to start winning consistently in the competition.
+            From 10/06 onwards, the initial day of Jones' contract, it is possible to see the positive impact on the team.
+        </p>
+        <img src="{% static '/hoofball/images/fixtures.png' %}" width="1366" height="768">
+
+        <p>This was the start of the season without him, while the team was still looking for the right tatical style.</p>
+        <img src="{% static '/hoofball/images/fixtures_start_season.png' %}" width="1366" height="768">
+    </section>
+{% endblock %}
+
+{% block show_comments %}
+    {% include "./show_comments.html" with comments=all_comments %}   
+{% endblock %}
+
+{% block comment_form %}
+    {% include "./forms/comment_form.html" with source="fixtures" %}   
+{% endblock %}

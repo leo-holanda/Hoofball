@@ -1,0 +1,36 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <a href="{% url 'index' %}"><img src="{% static '/hoofball/images/badge.png' %}" width="52" height="66"></a>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'squad' %}">Squad</a>
+            <a href="{% url 'fixtures' %}">Fixtures</a>
+            <a href="{% url 'finances' %}">Finances</a>
+            <a href="{% url 'goals' %}">Goals</a>
+            <a href="{% url 'suggestions' %}">Suggestions</a>
+        </ul>
+    </nav>
+
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+
+    <div>
+        {% block show_comments %}{% endblock %}
+    </div>
+
+    <div>
+        {% block comment_form %}{% endblock %}
+    </div>
+
+    <footer>© 2021 Leonardo Holanda. Not a single one right reserved.</footer>
+</body>
+</html>

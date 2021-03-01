@@ -1,0 +1,15 @@
+<h2>Send your comment:</h2>
+
+<form action="{% url 'create_comment' %}" method="POST">
+    {% csrf_token %}
+    <label>Your nickname:</label><br>
+    <input type="text" id="author" name="author"><br>
+    <br>
+
+    <label>Send a message! (280 characters limit)</label><br>
+    <textarea maxlength=280 required id="text" name="text"></textarea><br>
+
+    <input type="hidden" id="source" name="source" value={{ source }}>
+    <br>
+    <input type="submit" value="Submit">
+</form>

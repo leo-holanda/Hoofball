@@ -1,0 +1,14 @@
+{% extends "./base.html" %}
+
+{% load static %}
+
+{% block title %}Hoofball - Suggestions{% endblock %}
+
+{% block content %}
+
+    <div>
+        <h2>Suggest a player:</h2>
+        {% include "./forms/player_form.html" %}
+    </div>
+
+{% endblock %}

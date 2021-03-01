@@ -1,0 +1,24 @@
+{% extends "./base.html" %}
+
+{% load static %}
+
+{% block title %}Hoofball - Index{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Hoofball</h1>
+    <em>The best blog about well played Football Manager</em>
+
+    <section>
+        <p>
+            This blog aims to tell the story of my Football Manager 2020 save.
+            I am currently managing Lowestoft Town, a semi-professional club founded in 1884 in the city of Lowestoft, Suffolk, England, which plays in the 6th English division.
+        </p>
+    <img src="{% static '/hoofball/images/main.png' %}" width="1366" height="768">
+
+    <p>The club moved up from the 7th division and is fighting against relegation this season, 3 points below the first placed outside the zone.</p>
+    <img src="{% static '/hoofball/images/table.png' %}">
+    </section>
+
+    <h3>Our home</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155513.8147816572!2d1.4956127291115595!3d52.48088553099406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47da1af699127685%3A0x2e65e9805bbb68be!2sLowestoft%20Town%20Football%20Club!5e0!3m2!1sen!2sbr!4v1614280291720!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+{% endblock %}
