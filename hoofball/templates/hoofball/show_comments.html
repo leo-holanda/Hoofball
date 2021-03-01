@@ -1,12 +1,15 @@
 <h2>Comments</h2>
+
 {% for comment in comments %}
-    <div>
-        <hr>
-        <strong>{{ comment.author }}</strong>
-        <p>{{ comment.text|linebreaks }}</p>
-        <p>{{ comment.created_at }}</p>
-        <hr>
-    </div>
+    {% if comment.source == source %}
+        <div>
+            <hr>
+            <strong>Author: {{ comment.author }}</strong>
+            <p>{{ comment.text|linebreaks }}</p>
+            <p>{{ comment.created_at }}</p>
+            <hr>
+        </div>
+    {% endif %}
 {% empty %}
     <p>Be the first to comment!</p>
 {% endfor %}

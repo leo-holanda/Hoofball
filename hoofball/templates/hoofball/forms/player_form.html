@@ -1,4 +1,4 @@
-<form action="" method="post">
+<form action="{% url 'new_player' %}" method="post">
     {% csrf_token %}
     <label>Name:</label>
     <input type="text" id="name" name="name"><br>
@@ -28,5 +28,5 @@
     <textarea maxlength=280 required id="description" name="description"></textarea><br>
 
     <br>
-    <input type="submit" value="submit">
+    <input type="submit" value="Submit">
 </form>

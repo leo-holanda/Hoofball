@@ -9,5 +9,6 @@ urlpatterns = [
     path('goals', views.goals, name='goals'),
     path('squad', views.squad, name='squad'),
     path('suggestions', views.suggestions, name='suggestions'),
-    path('create_comment', views.create_comment, name='create_comment')
+    path('new_comment', views.new_comment, name='new_comment'),
+    path('new_player', views.new_player, name='new_player')
 ]

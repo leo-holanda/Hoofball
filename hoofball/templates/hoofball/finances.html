@@ -18,7 +18,7 @@
 {% endblock %}
 
 {% block show_comments %}
-    {% include "./show_comments.html" with comments=all_comments %}   
+    {% include "./show_comments.html" with comments=all_comments source="finances" %}   
 {% endblock %}
 
 {% block comment_form %}

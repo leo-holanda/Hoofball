@@ -1,6 +1,6 @@
 <h2>Send your comment:</h2>
 
-<form action="{% url 'create_comment' %}" method="POST">
+<form action="{% url 'new_comment' %}" method="POST">
     {% csrf_token %}
     <label>Your nickname:</label><br>
     <input type="text" id="author" name="author"><br>

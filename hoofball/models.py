@@ -17,11 +17,3 @@ class Comment(models.Model):
     text = models.TextField(max_length=280)
     created_at = models.DateTimeField(default=timezone.now)
     source = models.CharField(max_length=15)
-
-    def as_json(self):
-        return dict(
-            author = self.author,
-            text = self.text,
-            created_at = self.created_at,
-            source = self.source
-        )

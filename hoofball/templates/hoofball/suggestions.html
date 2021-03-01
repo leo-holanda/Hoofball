@@ -11,4 +11,30 @@
         {% include "./forms/player_form.html" %}
     </div>
 
+    <h2>Previous suggested players</h2>
+
+    <table style="border: 1px solid black">
+        <tr>
+            <th>Name</th>
+            <th>gameID</th>
+            <th>Age</th>
+            <th>Position</th>
+            <th>Wage</th>
+            <th>Value</th>
+            <th>Description</th>
+        </tr>
+        {% for player in all_players %}
+            <tr>
+                <th>{{ player.name }}</th>
+                <th>{{ player.gameID }}</th>
+                <th>{{ player.age }}</th>
+                <th>{{ player.position }}</th>
+                <th>{{ player.wage }}</th>
+                <th>{{ player.value }}</th>
+                <th>{{ player.description }}</th>
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+   
 {% endblock %}
