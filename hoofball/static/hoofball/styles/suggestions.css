@@ -1,0 +1,58 @@
+.suggestion-container{
+  grid-column: start;
+  grid-column-end: start-center;
+}
+
+.previously-suggested-container{
+  margin: 20px 50px 20px 20px;
+  grid-column: start-center;
+  grid-column-end: end;
+}
+
+.suggestion-form input{
+  padding: 15px;
+  width: 100%;
+  margin: 10px 0;
+  border: 2px solid #E0E0E0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+}
+
+.suggestion-form textarea{
+  height: 8rem;
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 2px solid #E0E0E0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+}
+
+.suggestion-submit{
+  font-size: 1.1rem;
+  background: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.suggestion-submit:hover{
+  background: green;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 1rem;
+  text-align: left;
+}
+
+th{
+  background: black;
+  color: white;
+}
+
+tr:nth-child(odd){
+  background: #c2c2c2;
+}

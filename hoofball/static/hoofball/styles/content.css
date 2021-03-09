@@ -1,0 +1,64 @@
+.content-container{
+  display: grid;
+  grid-template-columns: [start] 1fr [start-center] 2fr [end-center] 1fr [end];
+  grid-template-rows: 1fr;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column-start: start-center;
+  margin: 20px;
+}
+.squad-banner{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/squad_banner.jpeg");
+}
+
+.finances-banner{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/finances_banner.jpeg");
+}
+
+.fixtures-banner{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fixtures_banner.jpeg");
+}
+
+.goals-banner{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/goals_banner.jpeg");
+}
+
+.index-banner{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/index_banner.jpeg");
+}
+
+.suggestions-banner{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/suggestions_banner.jpeg");
+}
+
+.content-banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  grid-column: start;
+  grid-column-end: end;
+
+  height: 30rem;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.content-banner-text{
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2rem;
+  color: white;
+}
+
+section p{
+  font-size: 1.3rem;
+  text-align: start;
+}

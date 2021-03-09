@@ -36,7 +36,7 @@ def new_comment(request):
     new_comment.text = comment['text']
     new_comment.source = comment['source']
     new_comment.save()
-    return redirect("/hoofball/{}".format(comment["source"]))
+    return redirect("/{}".format(comment["source"]))
 
 def new_player(request):
     player = request.POST
@@ -51,4 +51,4 @@ def new_player(request):
 
     new_player.save()
 
-    return redirect('/hoofball/suggestions')
+    return redirect('/suggestions')

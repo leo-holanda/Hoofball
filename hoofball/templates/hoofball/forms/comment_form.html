@@ -1,4 +1,4 @@
-<h2>Send your comment:</h2>
+<h2>Send your comment</h2>
 
 <form action="{% url 'new_comment' %}" method="POST">
     {% csrf_token %}
@@ -11,5 +11,5 @@
 
     <input type="hidden" id="source" name="source" value={{ source }}>
     <br>
-    <input type="submit" value="Submit">
+    <input class="comment-submit" type="submit" value="Submit">
 </form>

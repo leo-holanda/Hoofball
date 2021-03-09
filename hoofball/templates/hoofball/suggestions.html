@@ -5,36 +5,42 @@
 {% block title %}Hoofball - Suggestions{% endblock %}
 
 {% block content %}
-
-    <div>
-        <h2>Suggest a player:</h2>
-        {% include "./forms/player_form.html" %}
+  <div class="content-banner suggestions-banner">
+    <div class="content-banner-text">
+      <h2>SUGGESTIONS</h2>
     </div>
+  </div>
 
-    <h2>Previous suggested players</h2>
+  <section class="suggestion-container">
+    <div class="suggestion-form">
+      <h2>Suggest a player:</h2>
+      {% include "./forms/player_form.html" %}
+    </div>
+  </section>
 
+  <div class="previously-suggested-container">
+    <h2>Previously suggested players</h2>
     <table style="border: 1px solid black">
-        <tr>
-            <th>Name</th>
-            <th>gameID</th>
-            <th>Age</th>
-            <th>Position</th>
-            <th>Wage</th>
-            <th>Value</th>
-            <th>Description</th>
-        </tr>
-        {% for player in all_players %}
-            <tr>
-                <th>{{ player.name }}</th>
-                <th>{{ player.gameID }}</th>
-                <th>{{ player.age }}</th>
-                <th>{{ player.position }}</th>
-                <th>{{ player.wage }}</th>
-                <th>{{ player.value }}</th>
-                <th>{{ player.description }}</th>
-            </tr>
-        {% endfor %}
+      <tr>
+        <th>Name</th>
+        <th>GameID</th>
+        <th>Age</th>
+        <th>Position</th>
+        <th>Wage</th>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+      {% for player in all_players %}
+      <tr>
+        <td>{{ player.name }}</td>
+        <td>{{ player.gameID }}</td>
+        <td>{{ player.age }}</td>
+        <td>{{ player.position }}</td>
+        <td>{{ player.wage }}</td>
+        <td>{{ player.value }}</td>
+        <td>{{ player.description }}</td>
+      </tr>
+      {% endfor %}
     </table>
-    <br>
-   
+  </div>
 {% endblock %}

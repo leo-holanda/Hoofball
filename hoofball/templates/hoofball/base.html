@@ -4,33 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'hoofball/styles/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'hoofball/styles/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'hoofball/styles/footer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'hoofball/styles/comment.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'hoofball/styles/content.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'hoofball/styles/suggestions.css' %}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+  <header>
     <nav>
-        <ul>
-            <a href="{% url 'index' %}"><img src="{% static '/hoofball/images/badge.png' %}" width="52" height="66"></a>
-            <a href="{% url 'index' %}">Home</a>
-            <a href="{% url 'squad' %}">Squad</a>
-            <a href="{% url 'fixtures' %}">Fixtures</a>
-            <a href="{% url 'finances' %}">Finances</a>
-            <a href="{% url 'goals' %}">Goals</a>
-            <a href="{% url 'suggestions' %}">Suggestions</a>
-        </ul>
+      <a href="{% url 'index' %}"><img src="{% static '/hoofball/images/badge.png' %}" width="52" height="66"></a>
+      <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'squad' %}">Squad</a></li>
+        <li><a href="{% url 'fixtures' %}">Fixtures</a></li>
+        <li><a href="{% url 'finances' %}">Finances</a></li>
+        <li><a href="{% url 'goals' %}">Goals</a></li>
+        <li><a href="{% url 'suggestions' %}">Suggestions</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <div>
+    <div class="content-container">
         {% block content %}{% endblock %}
     </div>
 
-    <div>
-        {% block show_comments %}{% endblock %}
-    </div>
-
-    <div>
-        {% block comment_form %}{% endblock %}
-    </div>
-
+    {% block comments %}{% endblock %}
+    
     <footer>© 2021 Leonardo Holanda. Not a single one right reserved.</footer>
 </body>
 </html>

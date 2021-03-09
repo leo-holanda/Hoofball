@@ -5,23 +5,31 @@
 {% block title %}Hoofball - Fixtures{% endblock %}
 
 {% block content %}
-    <section>
-        <p>These are our fixtures. We need to score 3 points in the next 2 matches, otherwise I will be fired.</p>
-        <p>
-            The hiring of Henry Jones was essential for the team to start winning consistently in the competition.
-            From 10/06 onwards, the initial day of Jones' contract, it is possible to see the positive impact on the team.
-        </p>
-        <img src="{% static '/hoofball/images/fixtures.png' %}" width="1366" height="768">
+  <div class="content-banner fixtures-banner">
+    <div class="content-banner-text">
+      <h2>FIXTURES</h2>
+    </div>
+  </div>
+  <section>
+    <p>These are our fixtures. We need to score 3 points in the next 2 matches, otherwise I will be fired.</p>
+    <p>
+        The hiring of Henry Jones was essential for the team to start winning consistently in the competition.
+        From 10/06 onwards, the initial day of Jones' contract, it is possible to see the positive impact on the team.
+    </p>
+    <img src="{% static '/hoofball/images/fixtures.png' %}" width="1366" height="768">
 
-        <p>This was the start of the season without him, while the team was still looking for the right tatical style.</p>
-        <img src="{% static '/hoofball/images/fixtures_start_season.png' %}" width="1366" height="768">
-    </section>
+    <p>This was the start of the season without him, while the team was still looking for the right tatical style.</p>
+    <img src="{% static '/hoofball/images/fixtures_start_season.png' %}" width="1366" height="768">
+  </section>
 {% endblock %}
 
-{% block show_comments %}
-    {% include "./show_comments.html" with comments=all_comments source="fixtures" %}   
-{% endblock %}
-
-{% block comment_form %}
-    {% include "./forms/comment_form.html" with source="fixtures" %}   
+{% block comments %}
+  <div class="comments-container">
+    <div class="comments-list">
+      {% include "./show_comments.html" with comments=all_comments source="fixtures" %}
+    </div>
+    <div class="comments-form">
+      {% include "./forms/comment_form.html" with source="fixtures" %}
+    </div>
+  </div>
 {% endblock %}

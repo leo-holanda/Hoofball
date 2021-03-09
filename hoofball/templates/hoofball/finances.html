@@ -5,22 +5,29 @@
 {% block title %}Hoofball - Finances{% endblock %}
 
 {% block content %}
-    <section>
-        <h2>Finances</h2>
-        <p>This is our finances. As you can see, we are in the red. Our main expenditures is player and staff wages and bonuses.
-            Most of our players doesn't have a contract, so they get paid per game, that's why the bonuses expenses are a bit high.
-        </p>
+  <div class="content-banner finances-banner">
+    <div class="content-banner-text">
+      <h2>FINANCES</h2>
+    </div>
+  </div>
+  <section>
+      <p>This is our finances. As you can see, we are in the red. Our main expenditures is player and staff wages and bonuses.
+          Most of our players doesn't have a contract, so they get paid per game, that's why the bonuses expenses are a bit high.
+      </p>
 
-        <p>Our income is basically the Gate Receipts, Season Tickets sales and Prizes Money.</p>
+      <p>Our income is basically the Gate Receipts, Season Tickets sales and Prizes Money.</p>
 
-        <img src="{% static '/hoofball/images/finances.png' %}" width="1366" height="768">
-    </section>
+      <img src="{% static '/hoofball/images/finances.png' %}" width="1366" height="768">
+  </section>
 {% endblock %}
 
-{% block show_comments %}
-    {% include "./show_comments.html" with comments=all_comments source="finances" %}   
-{% endblock %}
-
-{% block comment_form %}
-    {% include "./forms/comment_form.html" with source="finances" %}   
+{% block comments %}
+  <div class="comments-container">
+      <div class="comments-list">
+        {% include "./show_comments.html" with comments=all_comments source="finances" %}
+      </div>
+        <div class="comments-form">
+          {% include "./forms/comment_form.html" with source="finances" %}
+        </div>
+  </div>
 {% endblock %}

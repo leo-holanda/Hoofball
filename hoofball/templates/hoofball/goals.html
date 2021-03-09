@@ -5,23 +5,27 @@
 {% block title %}Hoofball - Goals{% endblock %}
 
 {% block content %}
-    <section>
-        <h2>Goals in 20/21 Season</h2>
+  <div class="content-banner goals-banner">
+    <div class="content-banner-text">
+      <h2>GOALS</h2>
+    </div>
+  </div>
+  <section>
+    <p>Those are some goals so far in the 20/21 Season.</p>
 
-        <p>Those are some goals so far.</p>
-    
-        <video controls>
-            <source src="{% static '/hoofball/videos/goal1.mp4' %}"type="video/mp4">
-        </video>
-    </section>
+    <video controls>
+      <source src="{% static '/hoofball/videos/goal1.mp4' %}"type="video/mp4">
+    </video>
+  </section>
 {% endblock %}
 
-{% block show_comments %}
-    {% include "./show_comments.html" with comments=all_comments source="goals" %}   
+{% block comments %}
+  <div class="comments-container">
+    <div class="comments-list">
+      {% include "./show_comments.html" with comments=all_comments source="goals" %}
+    </div>
+    <div class="comments-form">
+      {% include "./forms/comment_form.html" with source="goals" %}
+    </div>
+  </div>
 {% endblock %}
-
-
-{% block comment_form %}
-    {% include "./forms/comment_form.html" with source="goals" %}   
-{% endblock %}
-
