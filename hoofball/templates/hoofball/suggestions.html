@@ -20,15 +20,15 @@
 
   <div class="previously-suggested-container">
     <h2>Previously suggested players</h2>
-    <table style="border: 1px solid black">
+    <table id="suggestions_table" style="border: 1px solid black">
       <tr>
-        <th>Name</th>
-        <th>GameID</th>
-        <th>Age</th>
-        <th>Position</th>
-        <th>Wage</th>
-        <th>Value</th>
-        <th>Description</th>
+        <th onclick="sortTable(0)">Name</th>
+        <th onclick="sortTable(1)">GameID</th>
+        <th onclick="sortTable(2)">Age</th>
+        <th onclick="sortTable(3)">Position</th>
+        <th onclick="sortTable(4)">Wage</th>
+        <th onclick="sortTable(5)">Value</th>
+        <th onclick="sortTable(6)">Description</th>
       </tr>
       {% for player in all_players %}
       <tr>

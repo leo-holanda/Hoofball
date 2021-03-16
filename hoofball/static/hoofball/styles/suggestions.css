@@ -9,10 +9,33 @@
   grid-column-end: end;
 }
 
+fieldset{
+  border: 0px;
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+.suggestion-error-message{
+  display: none;
+  background-color: #FCEDEE;
+  color: red;
+  padding: 10px;
+  margin: 0px 0px 5px 0px;
+  font-size: 1.2rem;
+}
+
+.suggestion-error-message svg{
+  margin-right: 5px;
+}
+
+.suggestion-form {
+  margin: 0px 0px 0px 20px;
+}
+
 .suggestion-form input{
   padding: 15px;
   width: 100%;
-  margin: 10px 0;
+  margin: 10px 0px 0px 0px;
   border: 2px solid #E0E0E0;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
 }

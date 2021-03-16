@@ -1,32 +1,89 @@
-<form action="{% url 'new_player' %}" method="post">
+
+<form name="suggestion_form" action="{% url 'new_player' %}" method="post" onsubmit="return validateForm()">
     {% csrf_token %}
-    <label>Name:</label>
-    <input type="text" id="name" name="name"><br>
-    <br>
+    <fieldset>
+      <label>Name:</label>
+      <input type="text" id="name" name="name">
 
-    <label>ID in game:</label>
-    <input type="text" id="gameID" name="gameID"><br>
-    <br>
+      <p id="name_error" class="suggestion-error-message">
+        <i data-feather="alert-triangle"></i>
+        <span>
+          Name can't be empty!
+        </span>
+      </p>
+    </fieldset>
 
-    <label>Age:</label>
-    <input type="text" id="age" name="age"><br>
-    <br>
+    <fieldset>
+      <label>ID in game:</label>
+      <input type="number" id="gameID" name="gameID">
 
-    <label>Position:</label>
-    <input type="text" id="position" name="position"><br>
-    <br>
+      <p id="gameID_error"  class="suggestion-error-message">
+        <i data-feather="alert-triangle"></i>
+        <span>
+          ID in game can't be empty!
+        </span>
+      </p>
+    </fieldset>
 
-    <label>Wage:</label>
-    <input type="text" id="wage" name="wage"><br>
-    <br>
+    <fieldset>
+      <label>Age:</label>
+      <input type="number" id="age" name="age">
 
-    <label>Value:</label>
-    <input type="text" id="value" name="value"><br>
-    <br>
+      <p id="age_error" class="suggestion-error-message">
+        <i data-feather="alert-triangle"></i>
+        <span>
+          Age can't be empty!
+        </span>
+      </p>
+    </fieldset>
 
-    <label>What made you suggest this player? (280 characters limit)</label><br>
-    <textarea maxlength=280 required id="description" name="description"></textarea><br>
+    <fieldset>
+      <label>Position:</label>
+      <input type="text" id="position" name="position">
 
-    <br>
+      <p id="position_error" class="suggestion-error-message">
+        <i data-feather="alert-triangle"></i>
+        <span>
+          Position can't be empty!
+        </span>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <label>Wage:</label>
+      <input type="number" id="wage" name="wage">
+
+      <p id="wage_error" class="suggestion-error-message">
+        <i data-feather="alert-triangle"></i>
+        <span>
+          Wage can't be empty!
+        </span>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <label>Value:</label>
+      <input type="number" id="value" name="value">
+
+      <p id="value_error" class="suggestion-error-message">
+        <i data-feather="alert-triangle"></i>
+        <span>
+          Value can't be empty!
+        </span>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <label>What made you suggest this player? (280 characters limit)</label>
+      <textarea maxlength=280 required id="description" name="description"></textarea>
+
+      <p id="description_error" class="suggestion-error-message">
+        <i data-feather="alert-triangle"></i>
+        <span>
+          Description can't be empty!
+        </span>
+      </p>
+    </fieldset>
+
     <input class="suggestion-submit" type="submit" value="Submit">
 </form>
